@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NASA APOD JS</title>
+    <!-- Link Favicon -->
+    <link
+      rel="icon"
+      type="png"
+      href="https://www.google.com/s2/favicons?sz=32&domain_url=www.nasa.gov"
+    />
+    <!-- Link FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- loader Start -->
+    <div class="loader hidden">
+      <img src="rocket.svg" alt="Loading...." />
+    </div>
+    <!-- Loader End -->
+
+    <!-- full-conatiner-start -->
+    <div class="container">
+      <!-- navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- results nav -->
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable" onclick="updateDOM('addBookmarks')">Favourites</h3>
+          <h3>&nbsp;&nbsp;&nbsp; ◉ &nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable" onclick="getNASAphotos()">Load More</h3>
+        </span>
+        <!-- favourite-nav -->
+        <span class="navigation-items hidden" id="favouritesNav">
+          <h3 class="clickable" onclick="getNASAphotos()">Load More NASA Images</h3>
+        </span>
+      </div>
+      <!-- Image Container Start -->
+      <div class="images-container">
+       
+    </div>
+    <!-- full-container-end -->
+
+    <!-- Save-confirmation-start -->
+    <div class="save-confirmed" hidden>
+      <h3>ADDED !</h3>
+    </div>
+
+    <!-- Save-confirmation-end -->
+
+    <!-- Link Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
